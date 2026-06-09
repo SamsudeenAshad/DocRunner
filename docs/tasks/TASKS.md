@@ -32,16 +32,16 @@ Two surfaces over one shared core:
 
 ## Milestones / TODO
 - [x] Decide interface (CLI + API), Drive auth (public), depth (single page)
-- [] T1. Core data model: `ScrapeResult`, `SourceKind`, `DocRunnerError`
-- [ ] T2. URL classifier (`detect_source`) — website vs Drive vs Docs vs direct file
-- [ ] T3. Fetch layer — HTTP fetch w/ headers, redirects, content-type sniff
-- [ ] T4. Google Drive/Docs resolver — turn share links into download/export URLs
-- [ ] T5. Extractors — HTML→md, PDF→md, DOCX→md, text passthrough
-- [ ] T6. Orchestrator `scrape(url, opts)` ties it together
-- [ ] T7. CLI (`argparse`) — url, -o, --format, --include-linked-docs
-- [ ] T8. REST API (FastAPI) — POST /scrape, GET /health
-- [ ] T9. Tests — classifier, drive resolver, extractor units, e2e on local fixtures
-- [ ] T10. Packaging — pyproject, README usage
+- [x] T1. Core data model: `ScrapeResult`, `SourceKind`, `DocRunnerError`
+- [x] T2. URL classifier (`detect_source`) — website vs Drive vs Docs vs direct file
+- [x] T3. Fetch layer — HTTP fetch w/ headers, redirects, content-type sniff
+- [x] T4. Google Drive/Docs resolver — turn share links into download/export URLs
+- [x] T5. Extractors — HTML→md, PDF→md, DOCX→md, text passthrough
+- [x] T6. Orchestrator `scrape(url, opts)` ties it together
+- [x] T7. CLI (`argparse`) — url, -o, --json, --include-linked-docs
+- [x] T8. REST API (FastAPI) — POST /scrape, GET /health
+- [x] T9. Tests — classifier, drive resolver, extractor units, e2e on local fixtures (22 passing)
+- [x] T10. Packaging — pyproject, README usage
 
 ## Acceptance criteria
 1. `docrunner https://example.com -o out.md` writes valid markdown with the page title.
